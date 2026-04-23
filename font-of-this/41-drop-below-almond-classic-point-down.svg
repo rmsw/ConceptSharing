@@ -1,0 +1,56 @@
+<!-- Concept AN — AK (almond pupil) + AL's classical teardrop, flipped to point OUTWARDS.
+
+     Combines AK's "almond pupil with X's visible drop clearance" with AL's
+     classical-teardrop silhouette, but keeps the tip pointing OUTWARD from
+     the eye (like X and AK), not inward (AL pointed in toward the pupil).
+     This is the "mature" combination: almond lazy-eye pupil + canonical
+     raindrop falling out of the eye.
+
+       PUPIL   rx=8.5, ry=6, cy=12.5 (identical to AK — almond aspect 1.42,
+               raised 1.0 svg to preserve X's 1.0 svg clearance above a
+               classical bulb top at y=20.0 → here becomes 1.5 svg).
+       GAP     Identical to X — 36° gap, endpoints (20.02, 22.18) /
+               (11.98, 22.18), round stroke caps.
+       DROP    Same as AM: AL's classical teardrop mirrored across y=22.625.
+                 bulb   center (16, 21.75), r=1.75  — round top
+                 widest (17.515, 22.625) / (14.485, 22.625)  — tangent pts
+                 tip    (16, 25.25)                — point down / outward
+               C1-continuous join at the widest points.
+
+               Clearances (all visible, nothing touches):
+                 bulb top y=20.0    vs pupil bottom y=18.5   → 1.5 svg
+                 widest             vs gap end (20.02, 22.18) → ~2.54 svg
+                 tip y=25.25        vs viewBox bottom y=32   → 6.75 svg
+
+               Relative to AK: same pupil + gap, same outward-tip posture,
+               but the drop is a classical raindrop silhouette instead of
+               a cusp tear.
+               Relative to AL: same pupil + same classical raindrop shape,
+               but the raindrop is flipped so its tip points outward (away
+               from the eye) rather than toward the pupil. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — lazy eye with almond pupil and classical tip-down raindrop"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept AN — AK almond pupil + AL's teardrop flipped to point outward</title>
+    <defs>
+        <clipPath id="drop-below-almond-classic-point-down-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <ellipse cx="16" cy="12.5" rx="8.5" ry="6"
+             fill="currentColor" stroke="none"
+             clip-path="url(#drop-below-almond-classic-point-down-lid-clip)" />
+    <path d="M 20.02 22.18
+             A 13 6.5 0 1 0 11.98 22.18" />
+    <path d="M 16 25.25
+             L 17.515 22.625
+             A 1.75 1.75 0 1 0 14.485 22.625
+             L 16 25.25 Z"
+          fill="currentColor" stroke="none" />
+</svg>
