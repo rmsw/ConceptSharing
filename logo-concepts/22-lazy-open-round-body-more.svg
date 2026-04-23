@@ -1,0 +1,45 @@
+<!-- Concept V — T with an even rounder raindrop body.
+     One more notch past U on the body-roundness axis.
+
+       BULB      r=1.6 (T=1.3, U=1.5), centered at (26.8, 16).  Shoulders
+                 at (26.8, 14.4) and (26.8, 17.6).  At x=26.8 the orbit
+                 ellipse spans y ≈ [12.38, 19.62] — bulb still sits inside.
+       NEEDLE    tip at (31.8, 16) (0.2 svg further out than T's 31.6 to
+                 keep the needle-vs-body proportion similar to U).  Control
+                 point P1 at (28.1, 17.6): tangent-break 0°, initial
+                 cubic κ=0.683 vs bulb κ=0.625 (ratio 1.09×).
+                 Control adjacent to tip on y=16 axis at (26.8, 16) — cusp
+                 preserved.
+
+       PUPIL     unchanged from T (rx=10, ry=5, cy=13.5).
+       ORBIT     unchanged — ±18° gap.  Bulb shoulders sit 1.6 svg inside
+                 the gap at each end so they still tuck cleanly into the
+                 missing-arc interval.
+
+     currentColor. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — lazy eye, open orbit, even rounder teardrop body, T-pupil"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept V — T with an even rounder raindrop body (bulb r=1.6)</title>
+    <defs>
+        <clipPath id="lazy-open-round-body-more-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <ellipse cx="16" cy="13.5" rx="10" ry="5"
+             fill="currentColor" stroke="none"
+             clip-path="url(#lazy-open-round-body-more-lid-clip)" />
+    <path d="M 28.37 13.99
+             A 13 6.5 0 1 0 28.37 18.01" />
+    <path d="M 26.8 14.4
+             A 1.6 1.6 0 0 0 26.8 17.6
+             C 28.1 17.6, 26.8 16, 31.8 16
+             C 26.8 16, 28.1 14.4, 26.8 14.4 Z"
+          fill="currentColor" stroke="none" />
+</svg>

@@ -1,0 +1,50 @@
+<!-- Concept J — Ellipse Eye, elongated.  Iteration on Concept I: the
+     pupil is a bit more elliptic (rx 7.5 → 9, ry stays 7, so the
+     aspect ratio goes from 1.07 to 1.29) and shifted up one unit
+     (cy 16 → 15), so the upper lid covers noticeably more of the
+     pupil than the lower lid does — ≈25.7 svg² hidden above vs
+     ≈1.1 svg² below, roughly a 24× asymmetry, while the centre
+     column still reveals the full 11.5 svg-units of lid interior
+     and the pupil still kisses the bottom lid.  Lid and satellite
+     dot identical to G/I.  currentColor throughout. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — ellipse eye, elongated"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept J — Ellipse Eye, elongated</title>
+    <defs>
+        <clipPath id="ellipse-eye-elongated-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <!-- Pupil: horizontal ellipse, more elongated than Concept I's and
+         shifted up by one unit.
+           rx=9  (> I's 7.5, < lid inner rx 12.25) — pupil tapers to a
+                 point at x=7 and x=25, safely inside the lid corners;
+                 leaves clean sclera for the satellite dot at x=29.
+           ry=7  (same as I's) — keeps the pupil taller than the lid
+                 interior (ry 5.75) so the lid's arcs clip top and
+                 bottom.
+           cy=15 (I's was 16) — pupil top y=8 reaches high into the
+                 upper lid (interior top y=10.25, so 2.25 svg-units of
+                 pupil tuck behind the upper lid at the centre); pupil
+                 bottom y=22 only peeks 0.25 units past the lower lid
+                 interior (y=21.75) at the centre, so the bottom still
+                 kisses the lid and the iris reads as resting on the
+                 lower eyelid.
+         Net effect: the lid behaves like a real upper eyelid — sitting
+         heavier on the pupil than the lower lid — without losing the
+         full-height centre reveal or the pupil's grounded stance. -->
+    <ellipse cx="16" cy="15" rx="9" ry="7"
+             fill="currentColor" stroke="none"
+             clip-path="url(#ellipse-eye-elongated-lid-clip)" />
+    <!-- Lid drawn AFTER the pupil so its stroke covers the clip seam. -->
+    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+    <!-- Satellite point on the right — inherited from Concept A/G/I. -->
+    <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+</svg>

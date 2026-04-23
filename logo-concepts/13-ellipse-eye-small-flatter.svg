@@ -1,0 +1,60 @@
+<!-- Concept M — Ellipse Eye, small & flatter.  Evolution of K:
+     the pupil is made a bit flatter (ry 5.5 → 4.5, Δ=1), and the
+     resulting 2Δ = 2 svg-units of new empty space is applied
+     entirely BELOW the pupil, by shifting cy up by exactly Δ
+     (15 → 14).  So the pupil's TOP edge stays at y=9.5 — the
+     upper lid still clips exactly 0.75 svg-units off the crown,
+     same as K — while the bottom rises from y=20.5 to y=18.5,
+     leaving 3.25 svg of sclera between pupil and lower lid.
+       aspect w/h: 1.45 → 1.78 (flatter)
+       area:       ≈ 82% of K, ≈ 57% of J
+     Satellite: upgraded from a symmetric dot to a very sharp
+     raindrop with the heavy bulb INSIDE the lid (pointing toward
+     the pupil) and the tip OUTSIDE the lid, literally breaking
+     the lid line outward.  Lid unchanged.  currentColor. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — ellipse eye, small and flatter"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept M — Ellipse Eye, small &amp; flatter</title>
+    <defs>
+        <clipPath id="ellipse-eye-small-flatter-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <!-- Pupil.
+           rx=8   (same as K).
+           ry=4.5 (K was 5.5 — flatter by 1 svg-unit).
+           cy=14  (K was 15 — shifted up by 1 svg-unit so the top
+                   edge stays at y=9.5).
+         Result: top 9.5 (unchanged), bottom 18.5 (K was 20.5); all
+         of the reduction in height appears as extra sclera below. -->
+    <ellipse cx="16" cy="14" rx="8" ry="4.5"
+             fill="currentColor" stroke="none"
+             clip-path="url(#ellipse-eye-small-flatter-lid-clip)" />
+    <!-- Lid drawn AFTER the pupil so its stroke covers the clip seam. -->
+    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+    <!-- Satellite raindrop — heavy round bulb inward (toward the
+         pupil), sharp tip breaking outward through the lid line.
+           Bulb  : semicircular back, centre (28,16), radius 1.3,
+                   so the back reaches x=26.7 and the shoulders sit
+                   at (28, 14.7) and (28, 17.3) — the "weight" of
+                   the drop is entirely inside the lid.
+           Tip   : (31, 16), 2 svg-units past the lid's right edge
+                   (x=29 at y=16) and ~1.25 past the stroke's outer
+                   edge, clearly "breaking" the line outward.
+           Point : quadratic control points at (30.5, 17) and
+                   (30.5, 15) give a symmetric sharp ~53° tip.
+         Drawn AFTER the lid stroke, so the lid line is visibly
+         broken where the drop pokes through. -->
+    <path d="M 28 14.7
+             A 1.3 1.3 0 0 0 28 17.3
+             Q 30.5 17 31 16
+             Q 30.5 15 28 14.7 Z"
+          fill="currentColor" stroke="none" />
+</svg>

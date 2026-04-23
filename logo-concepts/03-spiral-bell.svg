@@ -1,0 +1,40 @@
+<!-- Concept C — Spiral Bell.
+     Top-down view of a spiral staircase — echoing the avatar — winding
+     inward to a small bell at the eye of the spiral. The outermost
+     loop functions as the "subtle ellipse". Built from successive
+     half-turn arcs with shrinking radii so the curve reads as a true
+     spiral, not a set of concentric rings.
+     currentColor throughout. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — spiral bell"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept C — Spiral Bell</title>
+
+    <!-- Inward spiral: starts at the top (16,3) and spirals clockwise
+         inward via half-turn arcs. Each arc's center shifts, producing
+         the characteristic spiral offset rather than a closed ring. -->
+    <path d="M 16 3
+             A 12 12 0 0 1 16 27
+             A 10 10 0 0 1 16 7
+             A 8  8  0 0 1 16 23
+             A 6  6  0 0 1 16 11
+             A 4  4  0 0 1 16 19" />
+
+    <!-- Bell at the eye of the spiral. Reads as a small dome + rim +
+         clapper — holds its character down to ~24px, then simplifies
+         to a solid dot below that. -->
+    <g fill="currentColor" stroke="none">
+        <!-- Dome -->
+        <path d="M 14.2 17 Q 14.2 14.2 16 14.2 Q 17.8 14.2 17.8 17 Z" />
+        <!-- Rim -->
+        <rect x="13.6" y="17" width="4.8" height="0.9" rx="0.3" />
+        <!-- Clapper -->
+        <circle cx="16" cy="18.4" r="0.6" />
+    </g>
+</svg>

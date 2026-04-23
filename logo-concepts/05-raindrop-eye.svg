@@ -1,0 +1,34 @@
+<!-- Concept E — Raindrop Eye. Concept A's raindrop, with A's orbit ring
+     stretched horizontally into an ellipse that reads as an upper/lower
+     eyelid — so the raindrop becomes the pupil. The teardrop's tip is
+     truncated by a short upward-bulging curve that mirrors the lid's
+     own curvature, so the drop visually nests under the lid without
+     piercing it and still reads as a raindrop.  Uses currentColor so
+     it re-tints via CSS. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — raindrop eye"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept E — Raindrop Eye</title>
+    <!-- Lid: A's r=13 orbit, stretched flat (ry=6.5).  Top at (16, 9.5),
+         bottom at (16, 22.5). -->
+    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+    <!-- Raindrop as pupil.  Round bottom + tapering sides read as a
+         teardrop; the short middle cubic at the top is the "cut" — it
+         bulges upward with the same sense as the upper lid, so the tip
+         is truncated by a curve that echoes the lid it sits beneath.
+         Drop top peak sits at y≈11.1 (lid inner edge is y≈10.25), so
+         there's a small but deliberate gap — the drop nests, it doesn't
+         fuse. -->
+    <path d="M 13 17
+             A 3 3 0 1 0 19 17
+             C 19 14.5, 18.3 12.3, 16.8 11.3
+             C 16.3 11, 15.7 11, 15.2 11.3
+             C 13.7 12.3, 13 14.5, 13 17 Z"
+          fill="currentColor" stroke="none" />
+</svg>

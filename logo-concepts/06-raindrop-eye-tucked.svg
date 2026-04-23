@@ -1,0 +1,41 @@
+<!-- Concept F — Raindrop Eye (tucked).  Iteration on Concept E: instead
+     of nesting the drop under the lid with a visible gap, the drop is
+     clipped by the lid ellipse so its pointed tip visibly disappears
+     behind the upper lid — the staircase-eye reading.  The drop is
+     also reshaped to read as gravity-heavy rather than egg-shaped: a
+     tight tapering tip with a fat round bulb at the bottom that kisses
+     the lid's inner lower edge.  Keeps Concept A's satellite dot on
+     the right.  Uses currentColor so it re-tints via CSS. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — raindrop eye, tucked"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept F — Raindrop Eye (tucked)</title>
+    <defs>
+        <!-- Clip = lid ellipse.  The drop's tip extends above this
+             boundary and gets hidden behind the upper lid. -->
+        <clipPath id="raindrop-eye-tucked-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <!-- Raindrop pupil.  Pointy tip at (16, 5.5), round bottom (r=4.25
+         centered at (16, 17.5)).  Narrow C1 offsets (±1.5) keep the
+         top tapered; wide C2 offsets (±4.25) create the gravity bulge
+         at the shoulders.  Bottom kisses the lid's inner lower edge at
+         (16, 21.75). -->
+    <path d="M 16 5.5
+             C 17.5 10, 20.25 15, 20.25 17.5
+             A 4.25 4.25 0 0 1 11.75 17.5
+             C 11.75 15, 14.5 10, 16 5.5 Z"
+          fill="currentColor" stroke="none"
+          clip-path="url(#raindrop-eye-tucked-lid-clip)" />
+    <!-- Lid drawn AFTER the drop so its stroke covers the clip seam. -->
+    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+    <!-- Satellite point on the right — inherited from Concept A. -->
+    <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+</svg>

@@ -1,0 +1,48 @@
+<!-- Concept X — T with the drop straight below the pupil (6 o'clock).
+     Axis-2 iteration pushed all the way: drop hangs vertically below the
+     center of the eye so it reads unambiguously as a tear falling below
+     (rather than exiting sideways or diagonally).
+
+     At parametric angle θ=90° on the orbit ellipse:
+       ELLIPSE BOUNDARY  (16, 22.5)
+       OUTWARD NORMAL    (0, 1) — straight down
+       TANGENT           (1, 0) — horizontal
+
+       BULB     r=1.5 centered at (16, 21), 1.5 svg inward from boundary.
+                Upper shoulder (17.5, 21), lower shoulder (14.5, 21).
+       NEEDLE   tip at (16, 25.1); P1 = shoulder + 1.0·(0, 1) = (14.5, 22)
+                and (17.5, 22); control adjacent to tip = bulb center
+                (16, 21) — cusp preserved.
+       ORBIT    gap endpoints at θ=72° and 108°: (20.02, 22.18) and
+                (11.98, 22.18).  36° gap width preserved.
+
+       PUPIL    unchanged from T.  Pupil bottom at y=18.5; drop top at
+                y=21 — ≥2.5 svg clearance, reads as "tear below eye".
+
+     currentColor. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — lazy eye, single tear hanging straight below the pupil"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept X — T with the drop directly below the pupil (θ=90°)</title>
+    <defs>
+        <clipPath id="lazy-open-drop-below-vert-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <ellipse cx="16" cy="13.5" rx="10" ry="5"
+             fill="currentColor" stroke="none"
+             clip-path="url(#lazy-open-drop-below-vert-lid-clip)" />
+    <path d="M 20.02 22.18
+             A 13 6.5 0 1 0 11.98 22.18" />
+    <path d="M 17.5 21
+             A 1.5 1.5 0 0 0 14.5 21
+             C 14.5 22, 16 21, 16 25.1
+             C 16 21, 17.5 22, 17.5 21 Z"
+          fill="currentColor" stroke="none" />
+</svg>

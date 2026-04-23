@@ -1,0 +1,47 @@
+<!-- Concept Q — Ellipse Eye, lazy + open orbit + razor raindrop (EXTREME).
+     All three axes pushed one more notch past P, into caricature:
+
+       1. LAZY EYE.  Pupil ry 3.5 → 3, cy 13 → 12.5.  Aspect 2.29 →
+          2.67 — a genuine heavy-lidded sliver.  Top math edge at
+          y=9.5 (unchanged); bottom rises to 15.5.  The pupil is
+          visually a bedroom-eye slit tucked deep under the lid.
+
+       2. OPEN ORBIT.  Gap widens 18° → 25°.  Gap corners at
+          (27.78, 13.25) and (27.78, 18.75) — a big open arc on
+          the right.  The orbit's far right side is now clearly
+          incomplete; the needle is the only thing bridging the
+          gap between upper- and lower-lid arcs.
+
+       3. RAZOR RAINDROP.  Bulb moves inward another 0.5 svg to
+          cx=27 and grows slightly to r=1.4 (shoulders at y=14.6 /
+          17.4 — still inside the gap by 1.35 svg at each end).
+          Tip extends to x=31.9 (only 0.1 svg shy of the viewBox
+          right edge).  Bulb-to-tip span 4.9 svg — longest needle.
+          Control points adjacent to the tip on the y=16 axis at
+          (27, 16) → perfect cusp.  currentColor. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — ellipse eye, lazy + open orbit + razor raindrop, extreme"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept Q — Ellipse Eye, lazy + open orbit + razor raindrop (extreme)</title>
+    <defs>
+        <clipPath id="ellipse-eye-lazy-open-extreme-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <ellipse cx="16" cy="12.5" rx="8" ry="3"
+             fill="currentColor" stroke="none"
+             clip-path="url(#ellipse-eye-lazy-open-extreme-lid-clip)" />
+    <path d="M 27.78 13.25
+             A 13 6.5 0 1 0 27.78 18.75" />
+    <path d="M 27 14.6
+             A 1.4 1.4 0 0 0 27 17.4
+             C 27.5 17.4, 27 16, 31.9 16
+             C 27 16, 27.5 14.6, 27 14.6 Z"
+          fill="currentColor" stroke="none" />
+</svg>

@@ -1,0 +1,51 @@
+<!-- Concept G — Raindrop Eye (pointy).  Iteration on Concept F: the
+     drop's upper profile is reshaped to be near-vertical at the axis
+     and fan out explosively toward the shoulder — an exponential,
+     1/x-like taper rather than a gentle curve.  The tip is razor-sharp
+     and sits high at y=3, so most of it is hidden behind the lid; what
+     peeks below the lid "opens up" toward the centre of the eye, where
+     the lid arches highest — mirroring a real eye's iris-behind-lid
+     reading and the staircase/cupola effect in the avatar.  Keeps
+     Concept A's satellite dot on the right.  Uses currentColor so it
+     re-tints via CSS. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — raindrop eye, pointy"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept G — Raindrop Eye (pointy)</title>
+    <defs>
+        <clipPath id="raindrop-eye-pointy-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <!-- Raindrop pupil with exponential-taper tip.
+         Tip at (16, 3) — well above the lid (inner top ≈ y=10.25).
+         Both cubic side control points C1 sit *on the y-axis* (x=16.05,
+         y=13): the sides stay pressed against the axis until very late
+         in t, so the upper ~70% of the drop reads as a near-vertical
+         spike.  C2 = (20.25, 16) pulls the curve sharply outward near
+         the shoulder, producing the 1/x-like "fans out at the bottom"
+         profile.  Width grows from 0 at the tip to ~0.9 at y=10 to
+         ~3.3 at y=15 to the full ±4.25 at the shoulder.
+         Bottom circle r=4.25 centered (16, 17.5); its lowest point
+         (16, 21.75) kisses the lid's inner lower edge.
+         At the centre column (x=16) about 11 svg-units of drop peek
+         below the lid; at x=20 only ~2.4 units peek, at x=20.25 the
+         drop meets the lid.  Iris is "revealed more" toward the
+         centre, exactly as requested. -->
+    <path d="M 16 3
+             C 16.05 13, 20.25 16, 20.25 17.5
+             A 4.25 4.25 0 0 1 11.75 17.5
+             C 11.75 16, 15.95 13, 16 3 Z"
+          fill="currentColor" stroke="none"
+          clip-path="url(#raindrop-eye-pointy-lid-clip)" />
+    <!-- Lid drawn AFTER the drop so its stroke covers the clip seam. -->
+    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+    <!-- Satellite point on the right — inherited from Concept A. -->
+    <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+</svg>

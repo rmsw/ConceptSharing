@@ -1,0 +1,39 @@
+<!-- Concept I — Ellipse Eye.  Abandoning the raindrop: the pupil is now
+     another horizontal ellipse, concentric with the lid but slightly
+     taller and narrower, clipped by the lid.  The lid's upper and
+     lower arcs naturally shave the pupil's top and bottom, giving a
+     clean "iris framed by eyelid" reading without the awkward
+     geometry a raindrop required.  Lid and satellite dot identical to
+     Concept G.  currentColor throughout. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — ellipse eye"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept I — Ellipse Eye</title>
+    <defs>
+        <clipPath id="ellipse-eye-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <!-- Pupil: horizontal ellipse, concentric with the lid.  rx=7.5
+         keeps it narrower than the lid's inner rx (12.25), so it
+         tapers to a point inside the lid at x=8.5 and x=23.5 rather
+         than running into the lid's corners.  ry=7 makes it taller
+         than the lid's inner ry (5.75), so the lid's upper and lower
+         arcs clip the pupil symmetrically.  At x=16 the reveal spans
+         the full lid interior (y=10.25 to 21.75 = 11.5 units); the
+         reveal narrows smoothly toward the sides following the lid's
+         own curvature. -->
+    <ellipse cx="16" cy="16" rx="7.5" ry="7"
+             fill="currentColor" stroke="none"
+             clip-path="url(#ellipse-eye-lid-clip)" />
+    <!-- Lid drawn AFTER the pupil so its stroke covers the clip seam. -->
+    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+    <!-- Satellite point on the right — inherited from Concept A/G. -->
+    <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+</svg>

@@ -1,0 +1,60 @@
+<!-- Concept W — T with the drop moved BELOW the pupil (diagonal).
+     In T the drop sits on the eye's horizontal midline (y=16) so it reads
+     as *beside* the pupil.  W rotates the whole drop+gap assembly around
+     the orbit center to the 5-o'clock direction — parametric angle 60°
+     on the orbit ellipse — so the drop now hangs off the lower-right of
+     the eye and clears the pupil's lower edge (y=18.5).
+
+     Geometry is derived from U (bulb r=1.5), oriented along the orbit's
+     outward NORMAL (not the radial direction — they differ on an ellipse)
+     at parametric angle θ=60°:
+
+       ELLIPSE BOUNDARY at θ=60°  (25.19, 20.60)
+       OUTWARD NORMAL unit vector (0.277, 0.960)  ← nearly straight down
+       TANGENT (for shoulder placement)  (0.960, -0.277)
+
+       BULB      r=1.5 centered at (22.08, 20.19), 1.5 svg inward from the
+                 boundary along -normal.  Upper shoulder (23.53, 19.77),
+                 lower shoulder (20.64, 20.60) — placed at ±r along the
+                 tangent (i.e. Rot(-90°)·normal, matching T's convention
+                 where the path starts at the upper shoulder).
+       NEEDLE    tip at (23.22, 24.13), 4.1 svg outward along +normal.
+                 Control point P1 = shoulder + 1.0·normal = (20.92, 21.56)
+                 on the lower side / (23.80, 20.73) on the upper side.
+                 Control adjacent to tip = bulb center (22.08, 20.19) —
+                 cusp preserved, exactly like U/T.
+       ORBIT GAP endpoints on the ellipse at θ=60°±18° = 42° and 78°
+                 — (25.66, 20.35) and (18.70, 22.36).  Same 36° gap width
+                 as T.
+
+       PUPIL     unchanged from T (rx=10, ry=5, cy=13.5).  Bottom edge
+                 at y=18.5; drop upper shoulder at y=19.77 — the drop
+                 sits entirely below the pupil with ~1.3 svg clearance.
+
+     currentColor. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — lazy eye, drop hanging below-right of the pupil"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept W — T with the drop repositioned below-right of the pupil (θ=60°)</title>
+    <defs>
+        <clipPath id="lazy-open-drop-below-diag-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <ellipse cx="16" cy="13.5" rx="10" ry="5"
+             fill="currentColor" stroke="none"
+             clip-path="url(#lazy-open-drop-below-diag-lid-clip)" />
+    <path d="M 25.66 20.35
+             A 13 6.5 0 1 0 18.70 22.36" />
+    <path d="M 23.53 19.77
+             A 1.5 1.5 0 0 0 20.64 20.60
+             C 20.92 21.56, 22.08 20.19, 23.22 24.13
+             C 22.08 20.19, 23.80 20.73, 23.53 19.77 Z"
+          fill="currentColor" stroke="none" />
+</svg>

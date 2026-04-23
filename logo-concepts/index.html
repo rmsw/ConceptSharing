@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Rainmaker Software — Logo Concepts</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+            color: #c8d6e5;
+            background: #030308;
+            line-height: 1.45;
+        }
+        header {
+            padding: 2rem 1.5rem 1rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        h1 { margin: 0 0 0.4rem; font-weight: 300; letter-spacing: 0.4px; color: #fff; }
+        header p { margin: 0.25rem 0; color: rgba(200, 220, 255, 0.65); font-size: 0.95rem; }
+        .concepts { max-width: 1100px; margin: 0 auto; padding: 1rem 1.5rem 4rem; }
+        .concept {
+            border: 1px solid rgba(0, 180, 255, 0.15);
+            border-radius: 8px;
+            margin: 1.25rem 0;
+            overflow: hidden;
+            background: rgba(0, 180, 255, 0.03);
+        }
+        .concept > h2 {
+            margin: 0;
+            padding: 0.9rem 1.1rem;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #fff;
+            border-bottom: 1px solid rgba(0, 180, 255, 0.12);
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+        .concept > h2 .tag {
+            font-size: 0.72rem;
+            font-weight: 400;
+            color: rgba(180, 220, 255, 0.65);
+            letter-spacing: 0.3px;
+        }
+        .concept > .note {
+            margin: 0;
+            padding: 0.7rem 1.1rem 0.9rem;
+            font-size: 0.85rem;
+            color: rgba(200, 220, 255, 0.6);
+            border-bottom: 1px solid rgba(0, 180, 255, 0.08);
+        }
+        .samples { display: grid; grid-template-columns: 1fr 1fr; }
+        .sample {
+            padding: 1.25rem 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            flex-wrap: wrap;
+        }
+        .sample.dark  { background: #030308; color: #00ccff; }
+        .sample.light { background: #f4f1ea; color: #0a2540; }
+        .sample.warm  { background: #0b0a12; color: #ffc85a; }
+        .sample.mono  { background: #ffffff; color: #111111; }
+
+        .swatch { display: flex; flex-direction: column; align-items: center; gap: 0.45rem; }
+        .swatch .label {
+            font-size: 0.7rem;
+            font-variant-numeric: tabular-nums;
+            color: currentColor;
+            opacity: 0.55;
+            letter-spacing: 0.3px;
+        }
+        .glyph { display: block; color: currentColor; }
+        .size-16  { width: 16px;   height: 16px;   }
+        .size-em  { width: 1.35em; height: 1.35em; }
+        .size-64  { width: 64px;   height: 64px;   }
+        .size-192 { width: 192px;  height: 192px;  }
+
+        .authored {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4em;
+            font-size: 1rem;
+            color: currentColor;
+        }
+        .authored .tm { font-size: 0.65em; vertical-align: super; opacity: 0.75; margin-left: 1px; }
+
+        @media (max-width: 720px) {
+            .samples { grid-template-columns: 1fr; }
+            .size-192 { width: 128px; height: 128px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sprite sheet: all concepts defined once as <symbol>, then referenced
+     via <use href="#..."/>. This is how we get currentColor to inherit
+     from the surrounding CSS — <img src="*.svg"> would not. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+        <!-- A — Raindrop in orbit -->
+        <symbol id="logo-a" viewBox="0 0 32 32">
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="16" cy="16" r="13" opacity="0.5" />
+                <path d="M16 5 C 19.8 10.5, 21 14.5, 21 17 A 5 5 0 0 1 11 17 C 11 14.5, 12.2 10.5, 16 5 Z"
+                      fill="currentColor" stroke="none" />
+                <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- B — Archway Threshold -->
+        <symbol id="logo-b" viewBox="0 0 32 32">
+            <g fill="none" stroke="currentColor" stroke-width="1.6"
+               stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 28 L7 14 A 9 9 0 0 1 25 14 L 25 28" />
+                <path d="M5 28 L 27 28" opacity="0.55" />
+                <ellipse cx="16" cy="22" rx="6" ry="1.6" opacity="0.7" />
+                <circle cx="16" cy="12.5" r="1.3" fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- C — Spiral Bell -->
+        <symbol id="logo-c" viewBox="0 0 32 32">
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 16 3
+                         A 12 12 0 0 1 16 27
+                         A 10 10 0 0 1 16 7
+                         A 8  8  0 0 1 16 23
+                         A 6  6  0 0 1 16 11
+                         A 4  4  0 0 1 16 19" />
+                <g fill="currentColor" stroke="none">
+                    <path d="M 14.2 17 Q 14.2 14.2 16 14.2 Q 17.8 14.2 17.8 17 Z" />
+                    <rect x="13.6" y="17" width="4.8" height="0.9" rx="0.3" />
+                    <circle cx="16" cy="18.4" r="0.6" />
+                </g>
+            </g>
+        </symbol>
+
+        <!-- E — Raindrop Eye (A's raindrop becomes the pupil; A's orbit becomes an ellipse lid) -->
+        <symbol id="logo-e" viewBox="0 0 32 32">
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                <path d="M 13 17
+                         A 3 3 0 1 0 19 17
+                         C 19 14.5, 18.3 12.3, 16.8 11.3
+                         C 16.3 11, 15.7 11, 15.2 11.3
+                         C 13.7 12.3, 13 14.5, 13 17 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- F — Raindrop Eye, tucked (E's drop clipped by the lid + gravity-heavy bulb + A's satellite) -->
+        <symbol id="logo-f" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-f-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 16 5.5
+                         C 17.5 10, 20.25 15, 20.25 17.5
+                         A 4.25 4.25 0 0 1 11.75 17.5
+                         C 11.75 15, 14.5 10, 16 5.5 Z"
+                      fill="currentColor" stroke="none"
+                      clip-path="url(#logo-f-lid-clip)" />
+                <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- G — Raindrop Eye, pointy (F's drop with an exponential 1/x-like tip that hides behind the lid) -->
+        <symbol id="logo-g" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-g-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 16 3
+                         C 16.05 13, 20.25 16, 20.25 17.5
+                         A 4.25 4.25 0 0 1 11.75 17.5
+                         C 11.75 16, 15.95 13, 16 3 Z"
+                      fill="currentColor" stroke="none"
+                      clip-path="url(#logo-g-lid-clip)" />
+                <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- H — Raindrop Eye, squished (G with a flatter lid + narrower, pointier, more-hidden drop) -->
+        <symbol id="logo-h" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-h-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="4.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 16 1
+                         C 16.05 14, 18.75 16.5, 18.75 17
+                         A 2.75 2.75 0 0 1 13.25 17
+                         C 13.25 16.5, 15.95 14, 16 1 Z"
+                      fill="currentColor" stroke="none"
+                      clip-path="url(#logo-h-lid-clip)" />
+                <ellipse cx="16" cy="16" rx="13" ry="4.5" />
+                <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- I — Ellipse Eye (G's lid with a horizontal-ellipse pupil instead of a raindrop) -->
+        <symbol id="logo-i" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-i-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="16" rx="7.5" ry="7"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-i-lid-clip)" />
+                <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- J — Ellipse Eye, elongated (I with more-elliptic pupil + shift up so top lid hides more) -->
+        <symbol id="logo-j" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-j-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="15" rx="9" ry="7"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-j-lid-clip)" />
+                <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- K — Ellipse Eye, small & flat (J shrunk and flattened) -->
+        <symbol id="logo-k" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-k-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="15" rx="8" ry="5.5"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-k-lid-clip)" />
+                <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- L — Asymmetric Droplet Eye (pupil is flatter on top, rounder on bottom — like profile pic) -->
+        <symbol id="logo-l" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-l-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 9 16.25 A 7 3.5 0 0 1 23 16.25 A 7 5.5 0 0 1 9 16.25 Z"
+                      fill="currentColor" stroke="none"
+                      clip-path="url(#logo-l-lid-clip)" />
+                <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- M — Ellipse Eye, small & flatter (K flattened; new space applied below) -->
+        <symbol id="logo-m" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-m-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="14" rx="8" ry="4.5"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-m-lid-clip)" />
+                <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                <path d="M 28 14.7 A 1.3 1.3 0 0 0 28 17.3 Q 30.5 17 31 16 Q 30.5 15 28 14.7 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- N — Asymmetric Droplet Eye, high & left (L moved up and slightly left; top lid covers crown) -->
+        <symbol id="logo-n" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-n-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 8 13 A 7 3.5 0 0 1 22 13 A 7 5.5 0 0 1 8 13 Z"
+                      fill="currentColor" stroke="none"
+                      clip-path="url(#logo-n-lid-clip)" />
+                <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- O — Ellipse Eye, lazy + open orbit + razor raindrop (mild) -->
+        <symbol id="logo-o" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-o-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13.5" rx="8" ry="4"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-o-lid-clip)" />
+                <path d="M 28.67 14.54 A 13 6.5 0 1 0 28.67 17.46" />
+                <path d="M 28 14.7 A 1.3 1.3 0 0 0 28 17.3 C 28.5 17.3, 28 16, 31.2 16 C 28 16, 28.5 14.7, 28 14.7 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- P — Ellipse Eye, lazy + open orbit + razor raindrop (medium) -->
+        <symbol id="logo-p" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-p-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13" rx="8" ry="3.5"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-p-lid-clip)" />
+                <path d="M 28.37 13.99 A 13 6.5 0 1 0 28.37 18.01" />
+                <path d="M 27.5 14.7 A 1.3 1.3 0 0 0 27.5 17.3 C 28 17.3, 27.5 16, 31.6 16 C 27.5 16, 28 14.7, 27.5 14.7 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- Q — Ellipse Eye, lazy + open orbit + razor raindrop (extreme) -->
+        <symbol id="logo-q" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-q-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="12.5" rx="8" ry="3"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-q-lid-clip)" />
+                <path d="M 27.78 13.25 A 13 6.5 0 1 0 27.78 18.75" />
+                <path d="M 27 14.6 A 1.4 1.4 0 0 0 27 17.4 C 27.5 17.4, 27 16, 31.9 16 C 27 16, 27.5 14.6, 27 14.6 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- R — Lazy eye, open orbit, round-neck razor raindrop (O pupil + P gap + smoothed-neck raindrop) -->
+        <symbol id="logo-r" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-r-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13.5" rx="8" ry="4"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-r-lid-clip)" />
+                <path d="M 28.37 13.99 A 13 6.5 0 1 0 28.37 18.01" />
+                <path d="M 27.5 14.7 A 1.3 1.3 0 0 0 27.5 17.3 C 28.5 17.3, 27.5 16, 31.6 16 C 27.5 16, 28.5 14.7, 27.5 14.7 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- S — R with a bigger pupil (rx=9, ry=4.5) -->
+        <symbol id="logo-s" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-s-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13.5" rx="9" ry="4.5"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-s-lid-clip)" />
+                <path d="M 28.37 13.99 A 13 6.5 0 1 0 28.37 18.01" />
+                <path d="M 27.5 14.7 A 1.3 1.3 0 0 0 27.5 17.3 C 28.5 17.3, 27.5 16, 31.6 16 C 27.5 16, 28.5 14.7, 27.5 14.7 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- T — R with an even bigger pupil (rx=10, ry=5) -->
+        <symbol id="logo-t" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-t-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13.5" rx="10" ry="5"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-t-lid-clip)" />
+                <path d="M 28.37 13.99 A 13 6.5 0 1 0 28.37 18.01" />
+                <path d="M 27.5 14.7 A 1.3 1.3 0 0 0 27.5 17.3 C 28.5 17.3, 27.5 16, 31.6 16 C 27.5 16, 28.5 14.7, 27.5 14.7 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- U — T with a rounder raindrop body (bulb r=1.5) -->
+        <symbol id="logo-u" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-u-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13.5" rx="10" ry="5"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-u-lid-clip)" />
+                <path d="M 28.37 13.99 A 13 6.5 0 1 0 28.37 18.01" />
+                <path d="M 27 14.5 A 1.5 1.5 0 0 0 27 17.5 C 28.2 17.5, 27 16, 31.6 16 C 27 16, 28.2 14.5, 27 14.5 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- V — T with an even rounder raindrop body (bulb r=1.6) -->
+        <symbol id="logo-v" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-v-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13.5" rx="10" ry="5"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-v-lid-clip)" />
+                <path d="M 28.37 13.99 A 13 6.5 0 1 0 28.37 18.01" />
+                <path d="M 26.8 14.4 A 1.6 1.6 0 0 0 26.8 17.6 C 28.1 17.6, 26.8 16, 31.8 16 C 26.8 16, 28.1 14.4, 26.8 14.4 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- W — T with the drop repositioned below-right of the pupil (θ=60°) -->
+        <symbol id="logo-w" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-w-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13.5" rx="10" ry="5"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-w-lid-clip)" />
+                <path d="M 25.66 20.35 A 13 6.5 0 1 0 18.70 22.36" />
+                <path d="M 23.53 19.77 A 1.5 1.5 0 0 0 20.64 20.60 C 20.92 21.56, 22.08 20.19, 23.22 24.13 C 22.08 20.19, 23.80 20.73, 23.53 19.77 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- X — T with the drop directly below the pupil (θ=90°) -->
+        <symbol id="logo-x" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-x-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13.5" rx="10" ry="5"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-x-lid-clip)" />
+                <path d="M 20.02 22.18 A 13 6.5 0 1 0 11.98 22.18" />
+                <path d="M 17.5 21 A 1.5 1.5 0 0 0 14.5 21 C 14.5 22, 16 21, 16 25.1 C 16 21, 17.5 22, 17.5 21 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- Y — T with a narrower/taller pupil (rx=9, ry=5.5) for sharper lid corners -->
+        <symbol id="logo-y" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-y-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13.5" rx="9" ry="5.5"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-y-lid-clip)" />
+                <path d="M 28.37 13.99 A 13 6.5 0 1 0 28.37 18.01" />
+                <path d="M 27.5 14.7 A 1.3 1.3 0 0 0 27.5 17.3 C 28.5 17.3, 27.5 16, 31.6 16 C 27.5 16, 28.5 14.7, 27.5 14.7 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- Z — T with an even narrower/taller pupil (rx=8.5, ry=6) for sharper lid corners -->
+        <symbol id="logo-z" viewBox="0 0 32 32">
+            <defs>
+                <clipPath id="logo-z-lid-clip">
+                    <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+                </clipPath>
+            </defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="16" cy="13.5" rx="8.5" ry="6"
+                         fill="currentColor" stroke="none"
+                         clip-path="url(#logo-z-lid-clip)" />
+                <path d="M 28.37 13.99 A 13 6.5 0 1 0 28.37 18.01" />
+                <path d="M 27.5 14.7 A 1.3 1.3 0 0 0 27.5 17.3 C 28.5 17.3, 27.5 16, 31.6 16 C 27.5 16, 28.5 14.7, 27.5 14.7 Z"
+                      fill="currentColor" stroke="none" />
+            </g>
+        </symbol>
+
+        <!-- D — Eye of Perception -->
+        <symbol id="logo-d" viewBox="0 0 32 32">
+            <g fill="none" stroke="currentColor" stroke-width="1.6"
+               stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 4 16 A 14 7 0 0 1 28 16 A 14 7 0 0 1 4 16 Z" />
+                <circle cx="16" cy="16" r="4.2" opacity="0.45" />
+                <g fill="currentColor" stroke="none">
+                    <path d="M 14 17 Q 14 13.6 16 13.6 Q 18 13.6 18 17 Z" />
+                    <rect x="13.4" y="17" width="5.2" height="1" rx="0.35" />
+                    <circle cx="16" cy="18.5" r="0.65" />
+                </g>
+            </g>
+        </symbol>
+    </defs>
+</svg>
+
+<header>
+    <h1>Rainmaker Software — Logo Concepts</h1>
+    <p>Four directions for the trademark. All marks are defined with <code>currentColor</code>, so the accent color is inherited from the surrounding text.</p>
+    <p>Each concept is shown at favicon (16&nbsp;px), inline-text (1.35&nbsp;em inside a real "Authored by" line), small (64&nbsp;px), and marketing (192&nbsp;px) sizes, on dark and light backgrounds. Source files are the <code>0N-*.svg</code> files in this folder.</p>
+</header>
+
+<main class="concepts">
+
+    <section class="concept">
+        <h2>Concept A — Raindrop in Orbit <span class="tag">(currently live on the home page)</span></h2>
+        <p class="note">Raindrop for "Rainmaker", faint ring + satellite point for "Software / Orbit". Clean glyph, but leans on the orbit metaphor — less ideal as a general mark.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-a"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-a"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-a"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-a"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-a"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-a"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-a"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-a"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept E — Raindrop Eye <span class="tag">(A × D — raindrop as pupil)</span></h2>
+        <p class="note">Concept A's raindrop re-cast as the pupil inside a horizontal ellipse — A's orbit ring (r=13) stretched flat (ry=6.5) into an eyelid. The teardrop's tip is truncated by a short upward-bulging cubic that mirrors the upper lid's curvature, so the drop sits just under the lid without piercing it and still reads as a raindrop.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-e"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-e"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-e"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-e"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-e"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-e"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-e"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-e"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept F — Raindrop Eye, tucked <span class="tag">(E, clipped by the lid + gravity-heavy bulb)</span></h2>
+        <p class="note">Iteration on E. The drop no longer floats inside the lid with a visible gap: it's clipped by the lid ellipse so its pointed tip disappears behind the upper lid — the staircase-as-eye reading. The drop is also reshaped to be gravity-heavy rather than egg-shaped: a tapering tip with a fat round bulb (r=4.25) that kisses the lid's inner lower edge. Concept A's satellite dot on the right is restored as the orbit point.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-f"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-f"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-f"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-f"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-f"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-f"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-f"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-f"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept G — Raindrop Eye, pointy <span class="tag">(F, with an exponential 1/x tip)</span></h2>
+        <p class="note">Iteration on F. The top of the drop is redrawn with a near-vertical, exponentially-tapered profile (cubic control points sit on the y-axis at x≈16.05, so the sides stay pressed against the centreline until very late, then fan out sharply toward the shoulder — a 1/x-like shape). The tip is razor-sharp at y=3; most of it is hidden behind the upper lid, and what peeks out below the lid "opens up" toward the centre of the eye, where the lid arches highest. Visible pupil height grows from ~0 at the outer corner to ~11 svg-units dead-centre, mirroring a real iris-behind-eyelid reading. Same gravity-heavy bulb and satellite dot as F.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-g"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-g"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-g"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-g"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-g"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-g"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-g"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-g"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept H — Raindrop Eye, squished <span class="tag">(G, flattened lid + narrower, pointier, more-hidden drop)</span></h2>
+        <p class="note">Iteration on G. The lid is squished flatter (<code>ry</code> 6.5 → 4.5, ~31% thinner), the drop is reshaped to be narrower and taller with an even sharper tip (shoulder width halved from 4.25 to 2.75; tip raised from y=3 to y=1, so ~10 svg-units of tip hide behind the lid), and the bulb is correspondingly smaller (r=2.75) so it still kisses the lid's inner lower edge. Same exponential 1/x tip philosophy as G — first cubic control point hugs the y-axis at x≈16.05. Visible pupil height at the centre is now only ~7.5 (was ~11 in G) and falls to zero by x=18.75; more of the drop is hidden, less peeks through, and the reveal still opens up toward the middle of the eye.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-h"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-h"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-h"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-h"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-h"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-h"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-h"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-h"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept I — Ellipse Eye <span class="tag">(G's lid, pupil is a horizontal ellipse instead of a raindrop)</span></h2>
+        <p class="note">Starting fresh from Concept G's lid. The raindrop pupil is replaced with another horizontal ellipse — concentric with the lid, slightly narrower (<code>rx</code> 7.5 vs lid inner 12.25) and slightly taller (<code>ry</code> 7 vs lid inner 5.75). The lid's upper and lower arcs clip the pupil's top and bottom symmetrically, so the iris naturally "tucks under" the lid the way an eyelid frames a real iris — no pointy seams, no awkward clip geometry. At the centre column the pupil fills the lid's full interior (11.5 svg-units tall); the reveal tapers smoothly to zero at <code>x</code>=8.5 and <code>x</code>=23.5, leaving clean sclera at the corners for the satellite dot to sit in. Lid stroke and satellite dot are identical to G, so F/G/H/I share the same outer silhouette.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-i"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-i"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-i"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-i"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-i"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-i"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-i"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-i"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept J — Ellipse Eye, elongated <span class="tag">(I with more-elliptic pupil, shifted up so the top lid hides more)</span></h2>
+        <p class="note">Iteration on I. The pupil is made more elliptic — <code>rx</code> 7.5 → 9 while <code>ry</code> stays at 7, aspect ratio 1.07 → 1.29 — and shifted up one unit (<code>cy</code> 16 → 15). The upper lid now does most of the hiding: ~25.7 svg² of pupil area is clipped by the upper lid vs only ~1.1 svg² by the lower lid (≈24× asymmetry), matching how a real upper eyelid sits heavier on an iris than the lower lid does. The centre column still reveals the full 11.5 svg-units of lid interior, and the pupil still kisses the bottom lid at <code>y</code>=21.75, so the iris keeps its grounded "resting on the lower lid" weight. Lid stroke and satellite dot are unchanged, so F/G/H/I/J share the same outer silhouette.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-j"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-j"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-j"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-j"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-j"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-j"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-j"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-j"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept K — Ellipse Eye, small &amp; flat <span class="tag">(J shrunk and flattened)</span></h2>
+        <p class="note">Iteration on J. The pupil is <em>smaller</em> — <code>rx</code> 9 → 8, <code>ry</code> 7 → 5.5, area ≈70% of J — and <em>flatter</em>, aspect ratio 1.29 → 1.45. <code>cy</code> stays at 15, so J's top-lid-heavy behaviour is preserved: the upper lid still clips ≈0.75 svg-units off the pupil crown while the lower lid now sits 1.25 svg-units clear (bottom kiss traded away as the pupil shrank). Reads as a smaller, calmer iris with the same "looking up into the lid" attitude as J. Same outer silhouette as F/G/H/I/J.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-k"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-k"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-k"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-k"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-k"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-k"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-k"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-k"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept L — Asymmetric Droplet Eye <span class="tag">(pupil like the Rainmaker profile picture — flat on top, round on bottom)</span></h2>
+        <p class="note">A different take on the asymmetry: rather than imposing it by clipping a symmetric ellipse with the lid (as in J/K), the pupil itself is an asymmetric droplet — a path made of two half-ellipses joined along the horizontal diameter at <code>y</code>=16.25. The top half has <code>ry</code>=3.5 (flat crown, as if compressed by the upper eyelid); the bottom half has <code>ry</code>=5.5 (round belly, weight resting on the lower lid). <code>rx</code>=7 on both halves. Result: a small pupil (≈50% of J's area, aspect 1.56) with 2.5 svg-units of sclera above — the same big dark crescent you see under the heavy upper lid in the Rainmaker staircase-eye profile picture — and a clean kiss on the lower lid at <code>y</code>=21.75. Lid and satellite dot unchanged, so F/G/H/I/J/K/L all share the same outer silhouette.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-l"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-l"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-l"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-l"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-l"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-l"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-l"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-l"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept M — Ellipse Eye, small &amp; flatter <span class="tag">(K flattened; the new empty space is applied below so the top lid still covers the same; satellite upgraded to a sharp raindrop breaking the lid line)</span></h2>
+        <p class="note">Evolution of K. The pupil is flattened by 1 svg-unit (<code>ry</code> 5.5 → 4.5) and <em>all</em> of the resulting 2 svg-units of new empty space are applied below the pupil, by shifting <code>cy</code> up by exactly the same amount (15 → 14). The pupil's top edge therefore stays pinned at <code>y</code>=9.5, so the upper lid still clips exactly 0.75 svg-units off the crown — identical top-lid coverage to K. The bottom rises from <code>y</code>=20.5 to <code>y</code>=18.5, leaving 3.25 svg-units of sclera above the lower lid (K had 1.25). Aspect widens from 1.45 to 1.78; area is ≈82% of K and ≈57% of J. Reads as an even calmer, more recessed iris with a thicker "sill" of bare lid below. <strong>The right-hand satellite is now a very sharp raindrop</strong>: a semicircular bulb of radius 1.3 centred at <code>(28, 16)</code> puts all the visual weight INSIDE the lid (pointing inward toward the pupil), while the tip at <code>(31, 16)</code> — ≈53° — pokes OUTSIDE the lid, 2 svg-units past its right edge at <code>x</code>=29, literally breaking the lid line outward. Lid unchanged (same outer ellipse as F/G/H/I/J/K/L/N).</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-m"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-m"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-m"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-m"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-m"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-m"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-m"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-m"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept N — Asymmetric Droplet Eye, high &amp; left <span class="tag">(L shifted up and slightly left so the top lid covers some of the crown)</span></h2>
+        <p class="note">Evolution of L. The droplet pupil keeps its asymmetric two-half-ellipse shape — flat top (<code>ry</code>=3.5), round bottom (<code>ry</code>=5.5), <code>rx</code>=7 on both halves — but is shifted by (<code>dx</code>=−1, <code>dy</code>=−3.25): new centre <code>cx</code>=15 with the joint at <code>y</code>=13 (L was 16 / 16.25). The top edge now reaches <code>y</code>=9.5, so the upper lid clips exactly 0.75 svg-units off the flat crown — same top-lid coverage as J / K / M — and the pupil's round bottom lifts to <code>y</code>=18.5, leaving 3.25 svg-units of sclera above the lower lid. Because the shift is only 1 svg-unit to the left, the pupil keeps all of its asymmetric-droplet feel but now visibly "peers out from under the upper lid", looking up and to the right toward the satellite. Pupil x-extent [8..22]; satellite dot at <code>cx</code>=29 still clear. Same outer silhouette as F/G/H/I/J/K/L/M.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-n"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-n"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-n"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-n"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-n"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-n"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-n"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-n"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept O — Lazy Eye, Open Orbit, Razor Raindrop <span class="tag">(mild: three-axis push past M — flatter pupil half-tucked into the lid, lid opened ±13° at the right, rounded dot replaced by a cusp-tipped needle)</span></h2>
+        <p class="note">First step of a three-tier escalation past M along three simultaneous axes. <strong>Lazy eye:</strong> pupil flattened <code>ry</code> 4.5 → 4 and shifted up <code>cy</code> 14 → 13.5 so its top edge stays pinned at <code>y</code>=9.5 but its bottom rises 18.5 → 17.5 and a bit more of the crown hides behind the upper-lid stroke; aspect widens 1.78 → 2.00. <strong>Open orbit:</strong> the lid is no longer a closed ellipse — it is drawn as an arc with a ±13° angular gap at its rightmost point, endpoints on the math ellipse at <code>(28.67, 14.54)</code> and <code>(28.67, 17.46)</code>, so the ring literally opens where the drop exits. <strong>Razor raindrop:</strong> same bulb as M (<code>cx</code>=28, <code>r</code>=1.3) but the tip has been redrawn as a mathematical cusp. The needle is two cubic Béziers from each shoulder to the tip at <code>(31.2, 16)</code>; for each cubic the control point adjacent to the tip is placed exactly on the <code>y</code>=16 axis at <code>(28, 16)</code>, so both halves arrive at the tip with horizontal tangents pointing in +x — interior angle 0°. Half-width at Δ<code>x</code>=0.5 svg from the tip ≈ 0.04 svg: asymptotically sharp versus M's shallow quadratic point.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-o"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-o"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-o"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-o"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-o"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-o"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-o"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-o"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept P — Lazy Eye, Open Orbit, Razor Raindrop <span class="tag">(medium: pupil now a sleepy slab, orbit clearly incomplete at ±18°, needle 4.1 svg long)</span></h2>
+        <p class="note">One notch past O on all three axes. <strong>Lazy eye:</strong> <code>ry</code> 4 → 3.5, <code>cy</code> 13.5 → 13 — aspect 2.00 → 2.29 and roughly half the pupil height now lives behind the upper-lid stroke; the eye reads as visibly heavy-lidded / sleepy. <strong>Open orbit:</strong> gap widens 13° → 18°, endpoints at <code>(28.37, 13.99)</code> and <code>(28.37, 18.01)</code> — a clearly noticeable wedge of the ring is missing. <strong>Razor raindrop:</strong> bulb slides inward 0.5 svg to <code>cx</code>=27.5 (still <code>r</code>=1.3) and tip extends to <code>x</code>=31.6, so the bulb-to-tip span grows from 3.2 to 4.1 svg. Control points adjacent to the tip stay on the <code>y</code>=16 axis at <code>(27.5, 16)</code> — cusp preserved; the longer run makes the asymptotic needle look still sharper.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-p"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-p"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-p"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-p"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-p"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-p"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-p"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-p"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept Q — Lazy Eye, Open Orbit, Razor Raindrop <span class="tag">(extreme: bedroom-eye sliver, ±25° open arc, 4.9-svg needle reaching almost to the viewBox edge)</span></h2>
+        <p class="note">The caricature setting of the O → P → Q series. <strong>Lazy eye:</strong> <code>ry</code> 3.5 → 3, <code>cy</code> 13 → 12.5 — aspect 2.29 → 2.67, a genuine bedroom-eye slit tucked deep under the lid. <strong>Open orbit:</strong> gap widens 18° → 25°, endpoints at <code>(27.78, 13.25)</code> and <code>(27.78, 18.75)</code>; the orbit's far-right side is dramatically incomplete and the needle is the only thing bridging the upper- and lower-lid arcs there. <strong>Razor raindrop:</strong> bulb moves inward another 0.5 svg to <code>cx</code>=27 and grows slightly to <code>r</code>=1.4 (shoulders at <code>y</code>=14.6/17.4, still inside the gap by 1.35 svg at each end); tip extends to <code>x</code>=31.9, only 0.1 svg shy of the viewBox right edge. Bulb-to-tip span 4.9 svg — longest needle. Control points adjacent to the tip on the <code>y</code>=16 axis at <code>(27, 16)</code> — cusp preserved.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-q"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-q"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-q"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-q"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-q"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-q"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-q"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-q"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept R — Lazy Eye, Open Orbit, Smooth-Neck Raindrop <span class="tag">(O pupil + P gap + P raindrop, with the bulb-to-needle seam fixed by matching curvature at the shoulder)</span></h2>
+        <p class="note">The user-preferred combination after the O/P/Q round, with P's "seam" diagnosed and fixed. <strong>Pupil from O:</strong> <code>rx</code>=8, <code>ry</code>=4, <code>cy</code>=13.5 — top edge pinned at <code>y</code>=9.5, bottom at 17.5, aspect 2.00; upper lid clips ≈0.75 svg off the crown (same lazy read as O). <strong>Orbit gap from P:</strong> ±18° at the right, endpoints on the math ellipse at <code>(28.37, 13.99)</code> and <code>(28.37, 18.01)</code>. <strong>Raindrop — seam diagnosed as a curvature (C²) discontinuity, not a tangent one.</strong> At the shoulder <code>(27.5, 17.3)</code> the circle's tangent is already horizontal (perpendicular to the vertical radius there) and P's cubic left horizontally too — so the tangents match. What jumped was the <em>curvature</em>: circle κ = 1/1.3 ≈ 0.77; P's cubic started at κ ≈ 3.47 (P1 only 0.5 svg east of the shoulder → small initial velocity → big initial bending), so the silhouette pinched ~4.5× sharper than the arc just past the shoulder — that's the read as a kink. The fix is a single +0.5 svg shift: move each cubic's first control point from <code>(28, 17.3)</code> to <code>(28.5, 17.3)</code> (and mirror for the upper side). That doubles the initial velocity, which <em>quarters</em> the initial curvature to ≈ 0.87 — within 13% of the circle's 0.77, visually seamless. Cusp at the tip preserved (control point adjacent to the tip stays on the <code>y</code>=16 axis at <code>(27.5, 16)</code>), so the needle stays exactly as sharp as P's.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-r"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-r"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-r"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-r"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-r"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-r"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-r"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-r"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept S — R with a bigger pupil <span class="tag">(pupil radii ×1.125; aspect 2.00 preserved; lid gap and raindrop unchanged)</span></h2>
+        <p class="note">Iteration on R along the pupil-size axis only. <strong>Pupil:</strong> <code>rx</code>=9 (R was 8), <code>ry</code>=4.5 (R was 4), <code>cy</code>=13.5. Top edge moves <code>y</code>=9.5 → 9.0 (now 0.5 svg above the lid's interior crown), so the upper lid clips ~1.25 svg of the crown (R clipped ~0.75) — the pupil reads as a touch more dominant AND a touch more hidden under the lid at the same time. Bottom edge 17.5 → 18.0; sclera sill below shrinks from 4.0 svg to 3.5. Area ≈1.27× R. <strong>Lid gap</strong> and <strong>round-neck raindrop</strong> unchanged from R.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-s"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-s"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-s"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-s"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-s"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-s"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-s"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-s"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept T — R with an even bigger pupil <span class="tag">(pupil radii ×1.25; lid gap and raindrop unchanged)</span></h2>
+        <p class="note">One more notch along the pupil-size axis. <strong>Pupil:</strong> <code>rx</code>=10, <code>ry</code>=5, <code>cy</code>=13.5, aspect 2.00 preserved. Top edge at <code>y</code>=8.5 — 1.0 svg above the lid's interior crown — so the upper lid clips ~1.75 svg: about a fifth of the vertical pupil extent hides behind the lid. Bottom at <code>y</code>=18.5. Horizontal extent <code>[6, 26]</code> still fits comfortably inside the lid (at <code>y</code>=13.5 the lid interior is <code>x</code> ≈ <code>[4.1, 27.9]</code>). Area ≈1.56× R. <strong>Lid gap</strong> and <strong>round-neck raindrop</strong> unchanged.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-t"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-t"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-t"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-t"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-t"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-t"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-t"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-t"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept U — T with a rounder raindrop body <span class="tag">(bulb r 1.3 → 1.5; needle tip position unchanged; curvature still matched at the shoulder)</span></h2>
+        <p class="note">First iteration on the "make the body rounder" axis. The R/S/T fix was a single-control-point nudge that matched curvature to a 13% tolerance but kept the bulb at r=1.3 against a 4.1-svg needle — silhouette still read as "pin-on-circle". U enlarges the bulb instead. <strong>Bulb:</strong> r=1.5 (T was 1.3), centered at <code>(27, 16)</code>; shoulders at <code>(27, 14.5)</code> / <code>(27, 17.5)</code>. At <code>x</code>=27 the orbit ellipse spans <code>y</code> ≈ <code>[12.54, 19.46]</code> — bulb sits comfortably inside with ≈2 svg clearance each side. <strong>Needle:</strong> tip still at <code>(31.6, 16)</code> (T's silhouette extent preserved); control point P1 at <code>(28.2, 17.5)</code>. Tangent-break at the shoulder 0.00°, initial cubic curvature κ=0.694 vs bulb κ=0.667 (ratio 1.04× — tighter match than T's 1.13×). Control adjacent to tip on the <code>y</code>=16 axis at <code>(27, 16)</code> — cusp preserved, exactly as sharp as T's. <strong>Pupil</strong> and <strong>orbit gap</strong> unchanged from T.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-u"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-u"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-u"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-u"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-u"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-u"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-u"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-u"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept V — T with an even rounder raindrop body <span class="tag">(bulb r 1.3 → 1.6; one more notch past U)</span></h2>
+        <p class="note">Further along the body-roundness axis. <strong>Bulb:</strong> r=1.6, centered at <code>(26.8, 16)</code>; shoulders at <code>(26.8, 14.4)</code> / <code>(26.8, 17.6)</code>. At <code>x</code>=26.8 the orbit spans <code>y</code> ≈ <code>[12.38, 19.62]</code>, bulb still inside. <strong>Needle:</strong> tip at <code>(31.8, 16)</code> (0.2 svg past T's tip, to keep needle-vs-body proportion comparable to U); P1 at <code>(28.1, 17.6)</code>, tangent-break 0°, cubic κ=0.683 vs bulb κ=0.625 (ratio 1.09×). Cusp preserved on the <code>y</code>=16 axis at <code>(26.8, 16)</code>. <strong>Pupil</strong> and <strong>orbit gap</strong> unchanged from T.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-v"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-v"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-v"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-v"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-v"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-v"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-v"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-v"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept W — T with the drop below the pupil (diagonal) <span class="tag">(drop + gap rotated to the 5-o'clock direction; pupil unchanged)</span></h2>
+        <p class="note">First iteration on the "drop below the pupil" axis. In T the drop is aligned with the eye's horizontal midline (<code>y</code>=16), which reads as *beside* the pupil rather than *below*. W rotates the drop+gap assembly around the orbit center to parametric angle θ=60° (the 5-o'clock direction on the ellipse). The drop is built along the orbit's outward *normal* there (not the radial direction — they differ on an ellipse): boundary point <code>(25.19, 20.60)</code>, outward normal ≈ <code>(0.277, 0.960)</code>. <strong>Bulb:</strong> r=1.5 (carries U's rounder-body geometry), centered at <code>(22.08, 20.19)</code>; upper shoulder <code>(23.53, 19.77)</code>, lower <code>(20.64, 20.60)</code>. <strong>Needle:</strong> tip at <code>(23.22, 24.13)</code> (4.1 svg outward); cusp preserved at the bulb center. <strong>Orbit gap:</strong> endpoints on the ellipse at θ=42° and θ=78° — <code>(25.66, 20.35)</code> and <code>(18.70, 22.36)</code>; same 36° gap width as T. <strong>Pupil</strong> unchanged from T — bottom at <code>y</code>=18.5, drop upper shoulder at <code>y</code>=19.77 → drop now clears the pupil's lower edge by ~1.3 svg.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-w"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-w"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-w"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-w"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-w"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-w"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-w"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-w"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept X — T with the drop straight below the pupil <span class="tag">(drop + gap rotated to 6 o'clock)</span></h2>
+        <p class="note">Axis-2 pushed all the way: drop hangs vertically below the eye. Parametric angle θ=90° on the orbit (bottom of ellipse at <code>(16, 22.5)</code>); outward normal <code>(0, 1)</code>. <strong>Bulb:</strong> r=1.5 at <code>(16, 21)</code>, shoulders <code>(14.5, 21)</code> / <code>(17.5, 21)</code>. <strong>Needle:</strong> tip at <code>(16, 25.1)</code>, cusp at bulb center. <strong>Orbit gap:</strong> endpoints at θ=72° and 108° → <code>(20.02, 22.18)</code> and <code>(11.98, 22.18)</code>; 36° width preserved. <strong>Pupil</strong> unchanged from T — bottom at <code>y</code>=18.5, drop top at <code>y</code>=21 (≥2.5 svg clearance). Reads as a single tear hanging below the eye.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-x"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-x"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-x"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-x"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-x"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-x"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-x"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-x"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept Y — T with sharper pupil-to-lid corners <span class="tag">(narrower/taller pupil, aspect 1.64)</span></h2>
+        <p class="note">First iteration on the "sharper corner" axis. In T the pupil ellipse and the orbit ellipse happen to share aspect 2.00, which makes their tangents nearly align at the intersection — the visible corners where the pupil meets the upper lid are a soft ~20° break. Making the pupil narrower and taller steepens its tangent at the intersection, widening the corner angle. <strong>Pupil:</strong> <code>rx</code>=9 (T=10), <code>ry</code>=5.5 (T=5), <code>cy</code>=13.5 (aspect 1.64 vs T's 2.00). Top edge at <code>y</code>=8.0 — 1.5 svg above the lid's interior crown — upper lid clips ~2.25 svg (T clipped ~1.75). Bottom at <code>y</code>=19.0. Horizontal extent <code>[7, 25]</code> fits inside the lid. <strong>Corner:</strong> pupil/orbit intersection at <code>(23.86, 10.82)</code>; pupil tangent 47.6°, orbit tangent 20.8° → <strong>26.9° corner</strong> (T was 20.0°, so ~35% sharper). <strong>Orbit gap</strong> and <strong>raindrop</strong> unchanged from R/S/T.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-y"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-y"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-y"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-y"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-y"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-y"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-y"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-y"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept Z — T with even sharper pupil-to-lid corners <span class="tag">(almond-aspect pupil, 1.42)</span></h2>
+        <p class="note">One more notch past Y. <strong>Pupil:</strong> <code>rx</code>=8.5, <code>ry</code>=6, <code>cy</code>=13.5 (aspect 1.42 — almond-ish). Top edge at <code>y</code>=7.5 — upper lid clips ~2.75 svg. Bottom at <code>y</code>=19.5. Horizontal extent <code>[7.5, 24.5]</code>. <strong>Corner:</strong> pupil/orbit intersection at <code>(23.51, 10.70)</code>; pupil tangent 53.1°, orbit tangent 19.5° → <strong>33.6° corner</strong> (T=20.0°, Y=26.9°, so ~68% sharper than T, ~25% sharper than Y). <strong>Orbit gap</strong> and <strong>raindrop</strong> unchanged.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-z"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-z"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-z"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-z"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-z"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-z"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-z"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-z"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept B — Archway Threshold</h2>
+        <p class="note">A Romanesque arched doorway — Huxley's "doors of perception" — framing a horizon-line ellipse and a small light at the apex. Subtle ellipse without a literal orbit.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-b"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-b"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-b"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-b"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-b"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-b"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-b"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-b"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept C — Spiral Bell</h2>
+        <p class="note">Top-down spiral echoing the staircase in your avatar, winding inward to a small bell at the eye of the spiral. The outer loop is the subtle ellipse.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-c"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-c"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-c"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-c"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-c"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-c"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-c"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-c"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Concept D — Eye of Perception</h2>
+        <p class="note">The staircase-as-eye composition, synthesized: a horizontal lens outline (the subtle ellipse) with a bell silhouette as the pupil. Doors of perception as literal perception.</p>
+        <div class="samples">
+            <div class="sample dark">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-d"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-d"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-d"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-d"/></svg><span class="label">192 px</span></div>
+            </div>
+            <div class="sample light">
+                <div class="swatch"><svg class="glyph size-16"><use href="#logo-d"/></svg><span class="label">16 px</span></div>
+                <div class="swatch"><span class="authored"><svg class="glyph size-em"><use href="#logo-d"/></svg>Rainmaker Software<span class="tm">™</span></span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-d"/></svg><span class="label">64 px</span></div>
+                <div class="swatch"><svg class="glyph size-192"><use href="#logo-d"/></svg><span class="label">192 px</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <h2>Alternate palettes <span class="tag">(same marks, different currentColor)</span></h2>
+        <p class="note">Verifies each concept re-tints cleanly — warm gold on near-black (your avatar's palette) and solid black on white (trademark registry / print use).</p>
+        <div class="samples">
+            <div class="sample warm">
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-e"/></svg><span class="label">E · gold</span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-b"/></svg><span class="label">B · gold</span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-c"/></svg><span class="label">C · gold</span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-d"/></svg><span class="label">D · gold</span></div>
+            </div>
+            <div class="sample mono">
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-e"/></svg><span class="label">E · mono</span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-b"/></svg><span class="label">B · mono</span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-c"/></svg><span class="label">C · mono</span></div>
+                <div class="swatch"><svg class="glyph size-64"><use href="#logo-d"/></svg><span class="label">D · mono</span></div>
+            </div>
+        </div>
+    </section>
+
+</main>
+</body>
+</html>

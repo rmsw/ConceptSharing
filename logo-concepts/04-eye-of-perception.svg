@@ -1,0 +1,42 @@
+<!-- Concept D — Eye of Perception.
+     A horizontal lens/eye outline (two arcs forming a vesica) with a
+     small bell as the pupil. Synthesizes:
+       - the "eye" composition of the avatar (staircase seen from above
+         reads as an iris),
+       - the green bell at its center,
+       - the "doors of perception" idea (the eye as an aperture),
+       - a subtle ellipse (the eye outline itself).
+     currentColor throughout. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — eye of perception"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.6"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept D — Eye of Perception</title>
+
+    <!-- Lens/eye outline: two arcs meeting at (4,16) and (28,16),
+         bulging up and down. Rx=14, ry=7 gives a lens proportion that
+         reads as an eye without being cartoonish. -->
+    <path d="M 4 16
+             A 14 7 0 0 1 28 16
+             A 14 7 0 0 1 4 16 Z" />
+
+    <!-- Iris ring — the subtle inner ellipse, kept faint so the bell
+         pupil stays the focal point. -->
+    <circle cx="16" cy="16" r="4.2" opacity="0.45" />
+
+    <!-- Bell pupil at the center. Slightly larger than in Concept C
+         because the eye frame lets it read as a single motif. -->
+    <g fill="currentColor" stroke="none">
+        <!-- Dome -->
+        <path d="M 14 17 Q 14 13.6 16 13.6 Q 18 13.6 18 17 Z" />
+        <!-- Rim -->
+        <rect x="13.4" y="17" width="5.2" height="1" rx="0.35" />
+        <!-- Clapper -->
+        <circle cx="16" cy="18.5" r="0.65" />
+    </g>
+</svg>

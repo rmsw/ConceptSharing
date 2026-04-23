@@ -1,0 +1,47 @@
+<!-- Concept H — Raindrop Eye (squished).  Iteration on Concept G: the
+     lid is squished flatter (ry 6.5 → 4.5), the drop is narrower and
+     taller with an even more extreme tip, and more of the tip sits
+     behind the lid so only a short slice of the pupil peeks through.
+     Same 1/x-like exponential taper philosophy as G — the cubic's
+     first control point sits on the y-axis so the sides stay pressed
+     against the centreline until very late in t, then fan out toward
+     the shoulder.  Uses currentColor so it re-tints via CSS. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — raindrop eye, squished"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept H — Raindrop Eye (squished)</title>
+    <defs>
+        <clipPath id="raindrop-eye-squished-lid-clip">
+            <!-- Flatter lid — was ry=6.5, now ry=4.5. -->
+            <ellipse cx="16" cy="16" rx="13" ry="4.5" />
+        </clipPath>
+    </defs>
+    <!-- Raindrop pupil.
+         Tip at (16, 1) — far above the lid's outer top (y=11.5), so
+         ~10 svg-units of tip hide behind the lid.
+         Cubic C1 = (16.05, 14) hugs the y-axis to produce the
+         exponential, near-vertical spike; C2 = (18.75, 16.5) fans out
+         sharply at the shoulder.  Shoulder at (18.75, 17), half the
+         width of G's (20.25).
+         Bottom bulb r=2.75 centered (16, 17); its lowest point
+         (16, 19.75) kisses the lid's inner lower edge.
+         Visible pupil height: 7.5 at centre (x=16), 3.6 at x=18,
+         ~0 at x=18.75 — opens up toward the middle, exactly like the
+         iris in the profile-picture staircase. -->
+    <path d="M 16 1
+             C 16.05 14, 18.75 16.5, 18.75 17
+             A 2.75 2.75 0 0 1 13.25 17
+             C 13.25 16.5, 15.95 14, 16 1 Z"
+          fill="currentColor" stroke="none"
+          clip-path="url(#raindrop-eye-squished-lid-clip)" />
+    <!-- Lid drawn AFTER the drop so its stroke covers the clip seam. -->
+    <ellipse cx="16" cy="16" rx="13" ry="4.5" />
+    <!-- Satellite point on the right — inherited from Concept A. -->
+    <circle cx="29" cy="16" r="1.4" fill="currentColor" stroke="none" />
+</svg>

@@ -1,0 +1,57 @@
+<!-- Concept R — Lazy eye, open orbit, SMOOTH-NECK razor raindrop.
+     The user-preferred combination: Concept O's pupil + Concept P's
+     orbit gap + Concept P's raindrop, with the bulb-to-needle
+     transition re-tuned so it reads as a continuous teardrop rather
+     than a circle glued to a needle.
+
+       1. PUPIL  — from O.  rx=8, ry=4, cy=13.5.  Top edge pinned at
+          y=9.5, bottom at 17.5, aspect 2.00.  Upper lid still clips
+          ≈0.75 svg off the crown (same lazy read as O).
+
+       2. ORBIT  — from P.  Lid arc with a ±18° angular gap at the
+          right, endpoints on the math ellipse at (28.37, 13.99) and
+          (28.37, 18.01).
+
+       3. RAINDROP — P's silhouette (bulb centre (27.5, 16) r=1.3,
+          tip at (31.6, 16), cusp preserved).  The "seam" in P is a
+          curvature discontinuity at the shoulder: the circle's
+          curvature there is 1/1.3 ≈ 0.77 but P's cubic starts with
+          curvature 3.47 (computed as (2/3)·|ΔP2y|/d², with
+          d = P1x − P0x = 0.5 and ΔP2y = 1.3), so the silhouette
+          pinches ~4.5× more sharply just past the shoulder than it
+          does in the arc — the eye reads that as a kink.  Moving
+          the cubic's first control point from (28, 17.3) to
+          (28.5, 17.3) (d = 0.5 → 1.0) quarters the initial cubic
+          curvature to 0.87, almost exactly matching the circle.
+          Tangent at the shoulder stays horizontal (C¹ preserved);
+          tangent at the tip stays horizontal (cusp preserved,
+          half-width still asymptotic).  The entire change is
+          +0.5 svg to a single control-point x per needle side.
+          currentColor. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     role="img"
+     aria-label="Rainmaker Software — lazy eye, open orbit, smooth-neck razor raindrop"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <title>Concept R — Lazy Eye, Open Orbit, Smooth-Neck Raindrop</title>
+    <defs>
+        <clipPath id="lazy-open-round-lid-clip">
+            <ellipse cx="16" cy="16" rx="13" ry="6.5" />
+        </clipPath>
+    </defs>
+    <ellipse cx="16" cy="13.5" rx="8" ry="4"
+             fill="currentColor" stroke="none"
+             clip-path="url(#lazy-open-round-lid-clip)" />
+    <path d="M 28.37 13.99
+             A 13 6.5 0 1 0 28.37 18.01" />
+    <path d="M 27.5 14.7
+             A 1.3 1.3 0 0 0 27.5 17.3
+             C 28.5 17.3, 27.5 16, 31.6 16
+             C 27.5 16, 28.5 14.7, 27.5 14.7 Z"
+          fill="currentColor" stroke="none" />
+</svg>
+
